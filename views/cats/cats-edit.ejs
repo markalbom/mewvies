@@ -1,0 +1,8 @@
+<form method="POST" action="/cats_routes/<%= cat.id %>?_method=PUT">
+
+  <input name="cat_name" type="text" value="<%= cat.cat_name %>">
+  <input name="cat_description" type="text" value="<%= cat.cat_description %>" />
+  <input name="cat_breed" type="text" value="<%= cat.cat_breed %>" />
+
+  <input type="submit" value="Edit this cat" />
+</form>

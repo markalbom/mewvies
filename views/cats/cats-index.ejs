@@ -1,0 +1,8 @@
+  <a href="/cats_routes/new">Add a brand new cat to the collection</a>
+
+  <% for (let cat of cats) { %>
+    <div class='cats'>
+      <h4><%= cat.cat_name %></h4>
+    <a href='/cats_routes/<%= cat.id%>'>Learn more about this cat</a>
+    </div>
+  <% } %>

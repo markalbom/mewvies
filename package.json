@@ -1,0 +1,39 @@
+{
+  "name": "Project_Two",
+  "version": "1.0.0",
+  "description": "GA WDI, Project Two - Cat Film DB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "debugging": "DEBUG=*:* npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:mjalbom/Project_Two.git"
+  },
+  "keywords": [],
+  "author": "Mark Albom",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "debugging": "^1.0.1",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
+    "path": "^0.12.7",
+    "pg-promise": "^7.3.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.12.1"
+  }
+}
