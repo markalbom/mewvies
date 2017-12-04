@@ -1,3 +1,5 @@
+  <% include ../partials/boilerplate %>
+
   <a href="/cats_routes/new">Add a brand new cat to the collection</a>
 
   <% for (let cat of cats) { %>
@@ -6,3 +8,5 @@
     <a href='/cats_routes/<%= cat.id%>'>Learn more about this cat</a>
     </div>
   <% } %>
+
+  <% include ../partials/footer %>

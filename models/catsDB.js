@@ -22,13 +22,18 @@ module.exports = {
 
   //function 'findOne' to select one cat, grabbing info from cat table and joining on cat_movies foreign key.
   findOne(id){
-    return db.one(`
-      SELECT DISTINCT cats.id, cats.cat_name, cats.cat_breed, cats.cat_description
-      FROM cats
-      INNER JOIN cat_movie on cats.id=cat_movie.cat_name_id
-      WHERE id = $1
-      `, id);
+    // return db.one(`
+    //   SELECT cats.id, cats.cat_name, cats.cat_breed, cats.cat_description, cat_movie.movie
+    //   FROM cats
+    //   INNER JOIN cat_movie on cats.id=cat_movie.cat_name_id
+    //   WHERE id = $1
+    //   `, id);
 
+    return db.one(`
+      SELECT *
+      FROM cats
+      WHERE id = $1;
+      `, id);
   },
 
 
@@ -45,12 +50,12 @@ module.exports = {
     return db.one(`
       UPDATE cats
       SET
-      cat_name = $/cat_name/,
-      cat_description = $/cat_description/,
-      cat_breed = $/cat_breed/
+        cat_name = $/cat_name/,
+        cat_description = $/cat_description/,
+        cat_breed = $/cat_breed/
       WHERE id = $/id/
       RETURNING *
-      `, cat)
+      `, cat);
   },
 
   delete(id){

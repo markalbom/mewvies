@@ -9,7 +9,6 @@ module.exports = {
   },
 
   showAllCats(req, res) {
-    console.log(res.locals.cats)
     res.render('cats/cats-index', {
     cats: res.locals.cats
     })
@@ -32,14 +31,14 @@ module.exports = {
   },
 
   handleCreate(req, res) {
-    res.redirect('/cats');
+    res.redirect('/cats_routes');
   },
 
   handleUpdate(req, res) {
-    res.redirect(`/cats/${req.params.id}`);
+    res.redirect(`/cats_routes/${req.params.id}`);
   },
 
   handleDelete(req, res) {
-    res.redirect('/cats');
+    res.redirect('/cats_routes');
   }
 }

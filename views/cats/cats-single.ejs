@@ -3,4 +3,8 @@
   <h2><%=cat.cat_breed %></h2>
   <h3><%=cat.cat_description %></h3>
   <a href="/cats_routes/<%= cat.id %>/edit"> Edit this cat </a>
+
+  <form action="/cats_routes/<%= cat.id %>?_method=Delete" method="Post">
+    <input type="Submit" value="Delete this cat"/>
+
 </div>

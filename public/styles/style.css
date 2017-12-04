@@ -1,0 +1,13 @@
+body{
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  line-height: 8px;
+  margin: 0 auto;
+  font-size: 15px;
+  background-color: rgb(161, 190, 237);
+}
+
+.welcome {
+  font-size: 18px;
+}

@@ -27,6 +27,7 @@ module.exports = {
   makeNewCat(req, res, next) {
     catsDB.save(req.body)
     .then((cat) => {
+      console.log(cat, 'posted');
       res.locals.cat = cat;
       next();
     })
@@ -47,7 +48,9 @@ module.exports = {
   },
 
   updateCat(req, res, next) {
+    req.body.id = req.params.id;
     console.log(req.body, 'controller update')
+
     catsDB.update(req.body)
     .then((cat) => {
       res.locals.cat = cat;

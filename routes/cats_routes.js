@@ -10,7 +10,7 @@ const catsRouter      = express.Router();
 
 
 catsRouter.route('/new')
-.post(catsController.makeBlankCat, views.showAddForm, views.show404);
+.get(catsController.makeBlankCat, views.showAddForm, views.show404);
 
 catsRouter.route('/:id/edit')
 .get(catsController.herdOneCat, views.showEditForm, views.show404);
