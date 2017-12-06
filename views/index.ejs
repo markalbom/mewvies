@@ -1,11 +1,14 @@
-
-
-<div class="welcome">
-  <h1><%= message %></h1>
-  <h2><%= documentTitle %></h2>
-  <h3><%= subTitle %></h3>
+<% include ./partials/boilerplate %>
+<div class = welcome page>
+  <div class="welcome">
+    <h2><%= documentTitle %></h2>
+    <h3><%= subTitle %></h3>
+    <h6><%= message %></h6>
+  </div>
 </div>
-<a href='/cats_routes'>See all the cats</a>
 
-
+<div class = 'seeCats'>
+  <a href='/cats_routes'>See all the cats</a>
+</div>
+<% include ./partials/footer %>
 

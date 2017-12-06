@@ -53,21 +53,41 @@ INSERT INTO cats (cat_name, cat_description, cat_breed) VALUES
   'Angora'
 );
 
-INSERT INTO cat_movie (movie_title, cat_name_id) VALUES
-('Bell, Book, and Candle', 1),
-('Bringing up Baby', 2),
-('Meet the Parents', 3),
-('Meet the Fockers', 3),
-('Little Fockers', 3),
-('Keanu', 4),
-('Breakfast at Tiffanys', 5),
-('Men in Black', 6),
-('The Third Man', 7),
-('American Pyscho', 8),
-('From Russia with Love', 9),
-('Thunderball', 9),
-('You Only Live Twice', 9),
-('Diamonds are Forever', 9),
-('For Your Eyes Only', 9),
-('Spectre', 9),
-('Austin Powers: International Man of Mystery', 10);
+
+INSERT INTO movies (movie_title) VALUES
+('Bell, Book, and Candle'),
+('Bringing up Baby'),
+('Meet the Parents'),
+('Meet the Fockers'),
+('Little Fockers'),
+('Keanu'),
+('Breakfast at Tiffanys'),
+('Men in Black'),
+('The Third Man'),
+('American Pyscho'),
+('From Russia with Love'),
+('Thunderball'),
+('You Only Live Twice'),
+('Diamonds are Forever'),
+('For Your Eyes Only'),
+('Spectre'),
+('Austin Powers: International Man of Mystery');
+
+INSERT INTO cats_movies_xref (movie_id, cat_id) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 3),
+(5, 3),
+(6, 4),
+(7, 5),
+(8, 6),
+(9, 7),
+(10, 8),
+(11, 9),
+(12, 9),
+(13, 9),
+(14, 9),
+(15, 9),
+(16, 9),
+(17, 10);

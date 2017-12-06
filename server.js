@@ -27,7 +27,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //set up static file
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //set up method override
 app.use(methodOverride('_method'));
@@ -38,9 +38,9 @@ app.use('/cats_routes', catsRouter);
 //on index (home route), display the following:
 app.get('/', (req, res) => {
   res.render('index', {
-    message:       'Meow',
-    documentTitle: 'Famous Film Felines',
-    subTitle:      'Hello and Welcome to Famous Cats in film - the purrfect place to find and add your favorite movie cats.'
+    documentTitle: 'Welcome to Famous Film Felines - the Cat Movie Database',
+    subTitle:      'The purrfect place to find and add your favorite movie cats.',
+    message:       'Yes, you read that correctly.  Here you can view a collection of cats that served important roles in films of the 20th and 21st century.  No cameo\'s here.  No small parts.  Only small cats.'
   });
 });
 

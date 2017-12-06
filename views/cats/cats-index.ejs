@@ -1,12 +1,14 @@
-  <% include ../partials/boilerplate %>
+<% include ../partials/boilerplate %>
 
-  <a href="/cats_routes/new">Add a brand new cat to the collection</a>
-
-  <% for (let cat of cats) { %>
+  <div class = 'test'>
+    <% for (let cat of cats) { %>
     <div class='cats'>
       <h4><%= cat.cat_name %></h4>
-    <a href='/cats_routes/<%= cat.id%>'>Learn more about this cat</a>
+    <a href='/cats_routes/<%= cat.id%>'>Curious about this cat?</a>
     </div>
-  <% } %>
+    <% } %>
+  </div>
 
-  <% include ../partials/footer %>
+<a href="/cats_routes/new">Don't see your favorite feline? Add a brand new cat to the collection here!</a>
+
+<% include ../partials/footer %>

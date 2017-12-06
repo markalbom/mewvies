@@ -1,10 +1,20 @@
 <div class= 'singlecat'>
-  <h1><%= cat.cat_name %></h1>
-  <h2><%=cat.cat_breed %></h2>
-  <h3><%=cat.cat_description %></h3>
-  <a href="/cats_routes/<%= cat.id %>/edit"> Edit this cat </a>
+  <h1>The cat: <%= cat.cat_name %></h1>
+  <h2>The breed: <%=cat.cat_breed %></h2>
+  <h2>The deal: <%=cat.cat_description %></h2>
+</div>
+  <a href="/cats_routes/<%= cat.id %>/edit"> "Purrr: Edit this cat" </a>
 
   <form action="/cats_routes/<%= cat.id %>?_method=Delete" method="Post">
-    <input type="Submit" value="Delete this cat"/>
+    <input type="Submit" value="Hissss: Delete this cat"/>
+  </form>
+
+
+  <% for (let movie of movies) { %>
+      <a href='/movies_routes/<%= movie.movie_title%>'><%= movie.movie_title%></a>
+  <% } %>
+
+  <a href="/cats_routes"> Return to see all the cats </a>
+
 
 </div>

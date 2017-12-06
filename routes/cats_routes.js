@@ -3,6 +3,7 @@ const express         = require('express');
 
 //import path for controllers (main controller - cats - and views controller) so that routes can then access them
 const catsController  = require('../controllers/catsController');
+const movieController = require('../controllers/movieController');
 const views           = require('../controllers/viewController');
 
 //create var that can now use the router method in the express library
@@ -13,10 +14,10 @@ catsRouter.route('/new')
 .get(catsController.makeBlankCat, views.showAddForm, views.show404);
 
 catsRouter.route('/:id/edit')
-.get(catsController.herdOneCat, views.showEditForm, views.show404);
+.get(catsController.herdOneCat, movieController.grabAllMovies, views.showEditForm, views.show404);
 
 catsRouter.route('/:id')
-.get(catsController.herdOneCat, views.showOneCat, views.show404)
+.get(catsController.herdOneCat, movieController.grabAllMovies, views.showOneCat, views.show404)
 .put(catsController.updateCat, views.handleUpdate, views.show404)
 .delete(catsController.deleteCat, views.handleDelete, views.show404);
 
