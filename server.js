@@ -38,7 +38,7 @@ app.use('/cats_routes', catsRouter);
 //on index (home route), display the following:
 app.get('/', (req, res) => {
   res.render('index', {
-    documentTitle: 'Welcome to Famous Film Felines - the Cat Movie Database',
+    documentTitle: 'Welcome to Mewvies - the Cat Movie Database',
     subTitle:      'The purrfect place to find and add your favorite movie cats.',
     message:       'Yes, you read that correctly.  Here you can view a collection of cats that served important roles in films of the 20th and 21st century.  No cameo\'s here.  No small parts.  Only small cats.'
   });
